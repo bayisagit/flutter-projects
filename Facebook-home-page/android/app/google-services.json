@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "261814965808",
+    "project_id": "fb-design-flutter",
+    "storage_bucket": "fb-design-flutter.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:261814965808:android:048fdab95f1edc6e96bff5",
+        "android_client_info": {
+          "package_name": "facebook_home_page.flutter.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "261814965808-n421djc8ik903kk2ml2bj4e0hlpma9vq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCiKBWhrW2E1RGRaYs6WYdoSYPoAObse74"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "261814965808-n421djc8ik903kk2ml2bj4e0hlpma9vq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
