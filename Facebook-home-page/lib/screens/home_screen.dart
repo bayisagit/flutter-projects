@@ -7,6 +7,8 @@ import '../services/story_service.dart';
 import '../widgets/create_post_container.dart';
 import '../widgets/post_container.dart';
 import '../widgets/stories_list.dart';
+import 'dashboard_screen.dart';
+import 'facebook_page_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -22,6 +24,7 @@ class HomeScreen extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.white,
         elevation: 0,
+        iconTheme: const IconThemeData(color: Color(0xFF1877F2)),
         title: const Text(
           'facebook',
           style: TextStyle(
@@ -37,6 +40,56 @@ class HomeScreen extends StatelessWidget {
             tooltip: 'Logout',
           ),
         ],
+      ),
+      drawer: Drawer(
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: [
+            const DrawerHeader(
+              decoration: BoxDecoration(
+                color: Color(0xFF1877F2),
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  Text(
+                    'Menu',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 24,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            ListTile(
+              leading: const Icon(Icons.dashboard, color: Color(0xFF1877F2)),
+              title: const Text('Dashboard'),
+              onTap: () {
+                Navigator.pop(context);
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const DashboardScreen()),
+                );
+              },
+            ),
+            ListTile(
+              leading: const Icon(Icons.flag, color: Color(0xFF1877F2)),
+              title: const Text('My Page'),
+              onTap: () {
+                Navigator.pop(context);
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const FacebookPageScreen()),
+                );
+              },
+            ),
+          ],
+        ),
       ),
       body: CustomScrollView(
         slivers: [
